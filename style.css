@@ -1,0 +1,265 @@
+html,body {
+  margin:0;
+  padding:0;
+  font-size: 14px;
+  font-family: Palatino, “Palatino Linotype”, Georgia, Times, “Times New Roman”, serif;
+  font-style: italic;
+}
+body {height:100%;}
+.light {
+  background-color: #fdf6e3;
+  color: #022b36;
+}
+.dark {
+  background-color: #022b36;
+  color: #93a1a1;
+}
+.inner {width:720px; margin:0 auto; padding:20px 0; overflow:auto;}
+
+h1, h2 {
+  font-size: 3em;
+  margin-bottom:0;
+  width: 240px;
+  height: 61px;
+  background: url("assets/img/xseed-logo.gif") top left no-repeat transparent;
+  text-indent:-5000px;
+}
+
+.dark h1, .dark h2 {background-position: bottom left;}
+.light h1, .light h2 {background-position: top left;}
+
+h3, h4 {
+  margin-top: 5px;
+  margin-bottom:20px;
+  font-size: 1.714em;
+  font-family: Palatino, “Palatino Linotype”, “Hoefler Text”, Times, “Times New Roman”, serif;
+  font-weight: normal;
+}
+
+.dark h3 {
+  margin-top:50px;
+}
+.light h3, .light h4 {color:#022B36;}
+.dark h3, .dark h4 {color:#FDF6E3;}
+
+a {text-decoration:none;}
+
+.dark a {color:#CBC7D3;}
+.dark a:hover {text-decoration:underline;}
+
+.light a {color:#e7712a;}
+.light a:hover {text-decoration:underline;}
+
+
+.searchornotify {
+  float:right;
+  position:relative;
+  top:-100px;
+}
+
+.searchornotify .search, .searchornotify .notify, .searchornotify span {
+  display:inline-block;
+  height:19px;
+  text-indent:-5000px;
+  line-height:8px;
+}
+
+.searchornotify span {text-indent:0;}
+.light .searchornotify span {color:#cbc7d3;}
+.dark .searchornotify span {color:#94a19a;}
+
+.search {
+  width:109px;
+  background: url("assets/img/search.gif") top left no-repeat transparent;
+}
+.notify {
+  width:94px;
+  background: url("assets/img/notify.gif") top left no-repeat transparent;
+}
+.light .search, .light .search {background-position: top left;}
+.dark .search, .dark .notify {background-position: bottom left;}
+
+.searchornotify a {
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.secondaryHeadline {
+  margin-top: 5px;
+  font-size: 1.286em;
+  font-family: Palatino, “Palatino Linotype”, “Hoefler Text”, Times, “Times New Roman”, serif;
+  line-height: 1.1em;
+}
+
+
+.light .secondaryHeadline {color:#fff;}
+.light .secondaryHeadline {color:#4d686a;}
+
+ul, ol, li {margin:0; padding:0; list-style:none;}
+
+li, .primaryText {font-size: 1.286em;}
+li a, .primaryText a {text-decoration:none;}
+
+.dark li a, .dark .primaryText {color:#62797c;}
+.light li a, .light .primaryText {color:#284057;}
+
+li {overflow:auto;}
+body li .torrent {margin-right:5px; float:left;}
+body li .seeds {text-align:right; float:right;}
+body li .delete {color:#e4a14a; font-style:italic; font-size:0.6em; margin-right:5px; float:left; line-height:2.5em;}
+body li .info {font-style:italic;font-size:0.6em;margin-right:5px; float:left; line-height:2.5em;}
+
+#searchResults {overflow:auto; margin-bottom:100px;}
+#searchResults li {padding:0 7px; line-height:2em;}
+#searchResults li:hover {background-color:#cccfe2;}
+
+#searchResults .noResults {background-color: transparent; line-height:1.4em;}
+#searchResults .noResults:hover {background-color: transparent;}
+#searchResults .noResults a {color:#e4a14a;}
+
+
+#searchForm.mini {
+  margin:50px 0;
+  overflow:auto;
+  width:100%;
+}
+#searchForm.mini input {display:inline-block; margin:0 10px 0 0; float:left;}
+#searchForm.mini #queryInput {width:145px;}
+#searchForm.mini p {display:inline-block;float:left; margin-top:0;}
+
+.primaryButton {
+  cursor: pointer;
+  background-color:#d99a47;
+  color: #022B36;
+  background:url("assets/img/primarybutton-left.gif") top left no-repeat #d99a47;
+  border:1px solid #aaaaaa;
+}
+.dark .primaryButton {background-image:url("assets/img/primarybutton-left.gif");}
+
+.secondaryButton {
+  cursor: pointer;
+  color: #022B36;
+  background:url("assets/img/secondarybutton-left.gif") top left no-repeat #fff;
+  border:1px solid #aaaaaa;
+  display: inline-block;
+  padding:5px;
+  margin-right:5px;
+}
+a.secondaryButton {color:#022B36;}
+a.secondaryButton:hover {color:#022B36; text-decoration:none;}
+input, select {
+  font-family: Palatino, “Palatino Linotype”, Georgia, Times, “Times New Roman”, serif;
+  font-size: 1.286em;
+  padding:0.4em;
+  font-style: italic;
+  border:1px solid #ccc;
+  background: url("assets/img/inputshadow.jpg") top left no-repeat #fff;
+}
+p select {font-size:1em;}
+.dark input, .dark select {background-image: url("assets/img/inputshadow-ondark.jpg");border:1px solid #333;}
+
+
+#searchForm {text-align:center; margin:150px 0 100px 0;}
+#searchForm .primaryButton {margin-bottom:50px;}
+#searchForm .sentence {text-align:center; font-size:1.286em; color: #022B36; }
+#queryInput, #searchButton {display:block; margin:10px auto;}
+#searchForm #queryInput {width:350px;}
+
+.loading {
+  display:block;
+  float:right;
+  width:16px;
+  height:16px;
+  background: url("assets/img/loading-onlight.gif") top left no-repeat transparent;
+  text-indent:-5000px;
+  
+}
+
+
+#signupPage, #notificationsPage {clear:left; margin:100px 0;}
+
+#signupInput {
+  width:400px;
+  margin-right:10px;
+}
+
+#notificationInput {
+  width:300px;
+  margin-right:10px;
+}
+
+#notificationsForm select {margin-right:10px;}
+
+.socialLinks {margin-top:20px;}
+
+.column {
+  width:45%;
+  float:left;
+  padding-right:5%;
+}
+
+.footer {
+  clear:both;
+  font-size: 12px;
+  text-align: center;
+  padding: 50px 0 200px;
+}
+
+.dark .footer {color: #4b4e5e;}
+.light .footer {color: #4b4e5e;}
+
+.rounded5 {
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+}
+
+
+
+
+.overlay {
+  top:0px;
+  bottom:0px;
+  position: fixed; /* needs fixing for IE */
+  width: 100%;
+  height:100%;
+  background: url("assets/img/overlay.png") top left transparent;
+  z-index:1000;
+}
+
+.modal {
+  opacity:1;
+  width: 230px;
+  background-color:#FDF6E3;
+  margin:200px auto;
+  padding:20px;
+  overflow:auto;
+}
+
+
+#loginWindow {display:none;}
+#loginWindow .loginInput {width:210px;}
+#loginWindow .primaryButton {margin:0 auto;}
+#loginWindow .modal input, #loginWindow .modal #forgottenPasswordLink {display:block; margin-top:10px;}
+#loginWindow h3 {margin-bottom:10px;}
+#forgottenPasswordLink {
+  margin-top:5px;
+  font-size:0.7em;
+  font-style:italic;
+  margin-bottom:20px;
+  display:block;
+}
+
+#loginWindow .modal .closeButton {float:right; display:block; position:relative; top:-50px; color:#022b36;}
+#loginWindow .modal .closeButton:hover {color:#022b36;}
+
+#loginWindow .modal .feedback {color:#e4a14a;}
+
+
+
+#searchResults {display:none;}
+/*#signupPage {display:none;}*/
+#notificationsPage {display:none;}
+
+/*.noUser {display:none;}*/
+.userLoggedIn {display:none;}
