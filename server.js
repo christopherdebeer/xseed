@@ -30,7 +30,13 @@ app.configure('production', function(){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Express'
+    title: 'xSeed'
+  });
+});
+
+app.post('/notify', function(req, res){
+  res.render('index', {
+    title: 'xSeed'
   });
 });
 
