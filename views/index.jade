@@ -1,0 +1,134 @@
+.light
+	.inner
+		a(name="search")
+		h1 xSeed
+		p.secondaryHeadline For people who think it should be easier to search for torrents, <br>or be notified when they're available.
+		p.searchornotify
+			a.search(href="#search") Search
+			span ~or~
+			a.notify(href="#notify") Notify
+		form#searchForm.mini(method="post",action="#")
+			input#searchButton.rounded5.primaryButton(value="Search for torrents related to",type="submit")
+			input#queryInput.rounded5(name="query",value="Example",type="text")
+			p.sentence.secondaryHeadline that have more than
+			select#seedsSelect(name="seeds")
+				option(selected="selected",value="10") 10
+				option(value="50") 50
+				option(value="100") 100 
+				option(value="500") 500
+				option(value="1000") 1000
+			span Seeds
+		div#searchResults
+			h3 
+				span Search results 
+				span.loading Loading
+			ul
+.dark 
+	.inner 
+		.about 
+			.column 
+				h4 About
+				p This is dummy text for now, Lorem ipsum dolor sit amet, consectezzigula leo tristique est, bibendum elementum est eros non nisl.  Vivamus bibendum tortor id nibh faucibus lacinia. Fusce id egestas ligula. Suspendisse rutrum gravida nibh, sed elementum purus ultrices. In molestie arcu id magna porttitor eget malesuada nibh lacinia. Quisque id tincidunt erat. Duis ultricies rhoncus diam. Aenean augue nulla, condimentum commodo tempus quis, dapibus quis sapien. Lorem ipsum  dolor sit amet, consectetur.
+
+			.column 
+				.noUser 
+					h4 Sign up for notifications
+					p Please sign in to use notify, or create an account if you dont have one already.
+					a.loginButton.secondaryButton.rounded5(href="#") Sign in
+					a.secondaryButton.rounded5(href="#notify") Sign up for an account
+
+				.userLoggedIn 
+					h4 Welcome
+					p Its nice to see you're using xseed.
+					a.logoutButton.secondaryButton.rounded5(href="#") Sign out
+					a.editprofileButton.secondaryButton.rounded5(href="#") Edit account details
+
+				.socialLinks 
+					a.tweet(href="http://twitter.com/share",data-text="#xseed The best/only torrent notifier and seed-count searcher http://xseed.no.de",data-count="horizontal",data-via="xseed") Tweet
+					script(type="text/javascript",src="/javascripts/widgets.js")
+					a.follow(href="#") Or follow us on twitter
+			p.footer 
+				span xseed was concieved, designed &amp; coded using 
+				a(href="# Yahoo's YQL") 
+				span and a bit of hacking <br> by 
+				a(href="#") Christopher de Beer
+				span &copy; 2011
+
+		a(name="notify")
+		h2 xSeed
+		p.secondaryHeadline For people who think it should be easier to search for torrents, <br>or be notified when they're available.
+		p.searchornotify 
+			a.search(href="#search") Search
+			span ~or~
+			a.notify(href="#notify") Notify
+
+		#signupPage 
+			h3 Your Notifications
+			p.primaryText Info paragraph informing the user that they need to sign up to be able to set notifications etc etc all they need do is enter their email address below.
+			form#signupForm(action="")
+				input#signupInput.rounded5(value="john.doe@gmail.com",type="text")
+				input.rounded5 primaryButton(value="Create an account",type="submit") 
+
+
+		#notificationsPage 
+			h3 Your Notifications
+			ul
+				li
+					a.torrent(href="#") A set notification of X.torrent
+					span.info Created 12.03.2001
+					a.delete(href="#") delete
+
+			form#notificationsForm(action="")
+				input#notificationInput.rounded5(default="Example",value="Example",type="text")
+				select#seedsSelect(name="seeds")
+					option(selected="selected",value="50") 50 seeds
+					option(value="100") 100 seeds
+					option(value="500") 500 seeds
+					option(value="1000") 1000 seeds
+				input.rounded5.primaryButton(value="set notification",type="submit")
+
+.light
+	.inner
+		.about
+			.column
+				h4 About
+				p This is dummy text for now, Lorem ipsum dolor sit amet, consectezzigula leo tristique est, bibendum elementum est eros non nisl. Vivamus bibendum tortor id nibh faucibus lacinia. Fusce id egestas ligula. Suspendisse rutrum gravida nibh, sed elementum purus ultrices a. In molestie arcu id magna porttitor eget malesuada nibh lacinia. Quisque id tincidunt erat. Duis ultricies rhoncus diam. Aenean augue nulla, condimentum commodo tempus quis, dapibus quis sapien. Lorem ipsum dolor sit amet, consectetur
+
+			.column
+				.noUser
+					h4 Sign up for notifications
+					p Please sign in to use notify, or create an account if you dont have one already.
+					a.loginButton.secondaryButton.rounded5(href="#") Sign in
+					a.secondaryButton.rounded5(href="#notify") Sign up for an account
+				.userLoggedIn
+					h4 Welcome
+					p Its nice to see you're using xseed.
+					a.logoutButton.secondaryButton.rounded5(href="#") Sign out
+					a.editprofileButton.secondaryButton.rounded5(href="#") Edit account details
+				.socialLinks
+					a.tweet(href="http://twitter.com/share",data-text="#xseed The best/only torrent notifier and seed-count searcher http://christopherdebeer.com/sandbox/xseed/",data-count="horizontal",data-via="xseed") Tweet
+					script(type="text/javascript",src="/javascripts/widgets.js")
+					a.follow(href="#") Or follow us on twitter
+			p.footer
+				span xseed was concieved, designed &amp; coded using 
+				a(href="#") Yahoo's YQL
+				span and a bit of hacking <br>by 
+				a(href="#") Christopher de Beer
+				span &copy; 2011
+
+#loginWindow.overlay
+	.modal.rounded5
+		h3 Welcome
+		a.closeButton(href="#") close
+		.feedback &nbsp;
+	form#loginForm(action="login.php",method="POST")
+		input.loginInput.rounded5.emailInput(name="email",value="your@address.com",default="Email address",type="text")
+		input.loginInput.rounded5.passwordInput(name="password",default="password",type="password")
+		a#forgottenPasswordLink(href="#") forgotten password?
+		input#loginSubmitButton.primaryButton.rounded5(value="Sign in",type="submit")
+
+script(type="text/javascript",src="http://code.jquery.com/jquery.min.js")
+script(type="text/javascript",src="/javascripts/xseed.js")
+script(type="text/javascript")
+	$(document).ready(function(){xseed.init();});
+

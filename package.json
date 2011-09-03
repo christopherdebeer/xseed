@@ -1,0 +1,11 @@
+{
+    "name": "xseed"
+  , "version": "0.0.1"
+  , "description": "a torrent seach and notification app"
+  , "private": true
+  , "dependencies": {
+      "express": "2.4.6"
+    , "jade": ">= 0.0.1"
+    , "mongoose": "0.2.1"
+  }
+}
